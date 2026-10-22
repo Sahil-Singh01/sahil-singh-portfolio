@@ -229,9 +229,16 @@ export default function ResumeModal({ isOpen, onClose, playClick, playHover }) {
                         {exp.period}
                       </span>
                     </div>
-                    <p className="font-body text-xs text-[#A1A1AA] leading-relaxed">
+                    <p className="font-body text-xs text-[#A1A1AA] leading-relaxed mb-2">
                       {exp.summary}
                     </p>
+                    {exp.responsibilities && (
+                      <ul className="text-xs text-[#A1A1AA] space-y-1 list-disc list-inside">
+                        {exp.responsibilities.map((r, ri) => (
+                          <li key={ri}>{r}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 ))}
               </div>

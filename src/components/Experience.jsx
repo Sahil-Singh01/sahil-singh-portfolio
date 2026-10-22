@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { experience, education, certifications } from '../data/portfolioData';
-import { Building2, GraduationCap, Award, CheckCircle2, Users, Briefcase } from 'lucide-react';
+import { Building2, GraduationCap, Award, CheckCircle2, Briefcase } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -61,7 +61,7 @@ export default function Experience({ playHover }) {
               EXPERIENCE.
             </h2>
             <p className="font-body text-sm sm:text-base text-[#A1A1AA] leading-relaxed">
-              Applied instructional analytics, structured education, and professional industry certifications.
+              Professional data analytics experience, structured education, and verified industry certifications.
             </p>
           </div>
 
@@ -99,7 +99,7 @@ export default function Experience({ playHover }) {
           </div>
         </div>
 
-        {/* Right Column: Featured IFDA Internship Role (7 cols) */}
+        {/* Right Column: Featured Role (7 cols) */}
         <div ref={cardRef} className="lg:col-span-7">
           <div 
             onMouseEnter={playHover}
@@ -131,27 +131,22 @@ export default function Experience({ playHover }) {
             </p>
 
             {/* Key Verified Responsibilities */}
-            <div className="flex flex-col gap-3 py-5 border-y border-white/5 mb-6">
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#FF365E]/10 border border-[#FF365E]/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <Users className="w-3 h-3 text-[#FF365E]" />
-                </div>
-                <p className="font-body text-sm text-[#A1A1AA] leading-relaxed">
-                  Trained <strong className="text-white">100+ aspiring data analysts</strong> in Python, SQL, Excel, Power BI and Tableau through project-based instruction across the full analytics lifecycle.
-                </p>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <div className="w-5 h-5 rounded-full bg-[#FF365E]/10 border border-[#FF365E]/30 flex items-center justify-center shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-3 h-3 text-[#FF365E]" />
-                </div>
-                <p className="font-body text-sm text-[#A1A1AA] leading-relaxed">
-                  Simplified exploratory data analysis, data wrangling, statistical hypothesis testing, and interactive dashboard concepts; evaluated learner proficiency and provided personalized feedback.
-                </p>
-              </div>
+            <div className="flex flex-col gap-3.5 py-5 border-y border-white/5 mb-6">
+              {singleExp.responsibilities ? (
+                singleExp.responsibilities.map((resp, idx) => (
+                  <div key={idx} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#FF365E]/10 border border-[#FF365E]/30 flex items-center justify-center shrink-0 mt-0.5">
+                      <CheckCircle2 className="w-3 h-3 text-[#FF365E]" />
+                    </div>
+                    <p className="font-body text-sm text-[#A1A1AA] leading-relaxed">
+                      {resp}
+                    </p>
+                  </div>
+                ))
+              ) : null}
             </div>
 
-            {/* Focused 5-Technology List */}
+            {/* Focused Technology List */}
             <div className="flex flex-wrap gap-2">
               {singleExp.tags.map((tag) => (
                 <span 

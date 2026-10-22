@@ -74,7 +74,7 @@ export default function App() {
           playClick={playClick}
         />
 
-        {/* Section 05: Experience & Credentials (IFDA Institute Internship) */}
+        {/* Section 05: Experience & Credentials (Image Retouch India LLP) */}
         <Experience 
           playHover={playHover}
         />

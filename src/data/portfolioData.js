@@ -242,12 +242,17 @@ export const projects = [
  */
 export const experience = [
   {
-    id: "ifda",
-    period: "Jan 2026 – Apr 2026",
-    role: "Data Analyst Intern",
-    organization: "IFDA Institute",
-    summary: "Trained 100+ aspiring data analysts in Python, SQL, Excel, Power BI and Tableau through project-based instruction across the full analytics workflow. Simplified EDA, data wrangling, statistical testing and visualization concepts; evaluated learner proficiency and gave individual feedback.",
-    tags: ["Python", "SQL", "Excel", "Power BI", "Tableau"]
+    id: "image-retouch",
+    period: "10 September 2025 – 14 September 2026",
+    role: "Junior Data Analyst",
+    organization: "Image Retouch India LLP",
+    summary: "Executed data cleaning, exploratory analysis, and reporting to generate data-driven insights and support business decision-making using Excel, SQL, Python, and Power BI.",
+    responsibilities: [
+      "Collected and cleaned data using Excel, SQL and Python, applying data validation to maintain data quality and accuracy.",
+      "Queried and analysed data with SQL and Python to generate data-driven insights for business decisions.",
+      "Prepared analytical reports in Excel and Power BI, visualising findings to support business decisions."
+    ],
+    tags: ["Microsoft Excel", "SQL", "Python", "Power BI"]
   }
 ];
 
